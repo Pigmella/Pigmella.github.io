@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="bookmark" href="img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/book_status.js"></script>
+    <title id="Title"></title>
+</head>
+<!--slider start -->
+   
+   <div class="bd-example">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      
+    </ol>
+   <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/b1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+         <p class="slider-title">                    </p>
+         <p class="slider-text">                    </p>
+         
+        </div>
+      </div>
+       <div class="carousel-item">
+        <img src="img/b2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <p class="slider-title">                   </p>
+         <p class="slider-text">                     </p>
+        
+        </div>
+      </div>
+
+<!-- 網頁內容 -->
+<div class="container">
+    <div class="row" style="margin-top: 80px;">
+        <div class="col-lg-10 offset-lg-1">
+            <h2 style="text-align: center;"><i class="fas fa-book mr-3"></i>書籍借閱狀況</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-lg-10 offset-lg-1" id="book_name">
+        </div>
+    </div>
+</div>
+
+</div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">                </span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">                 </span>
+    </a>
+  </div>
+</div>
+
+
+   
+   
+   <!--slider end-->
+
+
+
+
+
+
+
+
+<body>
+    <!-- 上方導覽列開始 -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+                
+ <a class="navbar-brand ml-2" href="index.html">
+<img src="img/books.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+     
+        我的小小圖書室 </a>
+               
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fas fa-share mr-1"></i>借書<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="retbook.html"><i class="fas fa-reply mr-1"></i>還書</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="addbook.html"><i class="fas fa-book-medical mr-1"></i>新增書籍</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="brostatus.html"><i class="fas fa-address-book mr-1"></i>人員借閱狀況</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="bookstatus.html"><i class="fas fa-book mr-1"></i>書籍借閱狀況</a>
+                </li>
+                <li class="nav-item" id="dataLink">
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 上方導覽列結束 -->
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/8afdbc25a9.js"></script>
+
+
+<script>
+    
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+   </script>
+</body>
+
+</html>

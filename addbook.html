@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="shortcut icon" href="img/favicon.ico" />
+<link rel="bookmark" href="img/favicon.ico" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/addbook.js"></script>
+<title id="Title"></title>
+</head>
+
+<!--slider start -->
+   
+   <div class="bd-example">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      
+    </ol>
+   <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/b1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+         <p class="slider-title">                    </p>
+         <p class="slider-text">                    </p>
+         
+        </div>
+      </div>
+       <div class="carousel-item">
+        <img src="img/b2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <p class="slider-title">                   </p>
+         <p class="slider-text">                     </p>
+        
+        </div>
+      </div>
+
+       <div class="container">
+        <div class="row" style="margin-top: 80px;">
+            <div class="col-lg-6 offset-lg-3">
+                <h2 style="text-align: center;"><i class="fas fa-book-medical mr-3"></i>新增書籍</h2>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-6 offset-lg-3">
+                <form>
+                    <div class="form-group row">
+                        <label for="isbn" class="col-sm-4 col-form-label" style="text-align: end;">ISBN：</label>
+                        <div class="col-sm-8" style="margin-left: -20px;">
+                            <input class="form-control" id="isbn" name="isbn" placeholder="請輸入書籍ISBN後按Enter鍵">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3" id="spinners_isbn">
+                    </div>
+                    <div class="div" id="alert_isbn" style="text-align: center;">
+                    </div>
+                    <h2 class="mt-5 mb-4" style="text-align: center;"><i class="fas fa-info-circle mr-3"></i>書籍資料</h2>
+                    <div class="form-group row">
+                        <label for="book_name" class="col-sm-4 col-form-label" style="text-align: end;">書名：</label>
+                        <div class="col-sm-8" style="margin-left: -20px;">
+                            <input class="form-control" id="book_name" name="book_name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="book_author" class="col-sm-4 col-form-label" style="text-align: end;">作者：</label>
+                        <div class="col-sm-8" style="margin-left: -20px;">
+                            <input class="form-control" id="book_author" name="book_author">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="book_maker" class="col-sm-4 col-form-label" style="text-align: end;">出版社：</label>
+                        <div class="col-sm-8" style="margin-left: -20px;">
+                            <input class="form-control" id="book_maker" name="book_maker">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="book_isbn" class="col-sm-4 col-form-label" style="text-align: end;">ISBN：</label>
+                        <div class="col-sm-8" style="margin-left: -20px;">
+                            <input class="form-control" id="book_isbn" name="book_isbn">
+                        </div>
+                    </div>
+                    <button id="mybutton" name="mybutton" type="button" class="btn btn-block btn-outline-secondary mt">填好送出</button>
+                </form>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="card shadow mb-5">
+                    <div class="card-header text-center" id="books_title">
+                        機讀資料
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text" id="test">輸入ISBN後會自動帶出書籍相關資訊</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- <div id="test"></div> -->
+</div>
+
+
+
+
+
+
+   </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">                </span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">                 </span>
+    </a>
+  </div>
+</div>
+
+
+   
+   
+   <!--slider end-->
+
+
+
+
+<body>
+    <!-- 上方導覽列開始 -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+                
+ <a class="navbar-brand ml-2" href="index.html">
+<img src="img/books.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+     
+        我的小小圖書室 </a>
+               
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fas fa-share mr-1"></i>借書<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="retbook.html"><i class="fas fa-reply mr-1"></i>還書</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="addbook.html"><i class="fas fa-book-medical mr-1"></i>新增書籍</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="brostatus.html"><i class="fas fa-address-book mr-1"></i>人員借閱狀況</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bookstatus.html"><i class="fas fa-book mr-1"></i>書籍借閱狀況</a>
+                </li>
+                <li class="nav-item" id="dataLink">
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 上方導覽列結束 -->
+
+   
+
+<script>document.getElementById('isbn').focus();</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/8afdbc25a9.js"></script>
+
+<script>
+    
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+   </script>
+</body>
+</html>
